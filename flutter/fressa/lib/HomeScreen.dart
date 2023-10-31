@@ -119,7 +119,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 }),
-          )
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 10,right: 10),
+            height: 120,
+          ),
+
         ],
       ),
     );
