@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'HomeScreen.dart';
 import 'DrawerScreen.dart';
+import 'Itemdetail.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,15 +15,20 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          DrawerScreen(),
-          HomeScreen(),
-
-        ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {
+        "itemdetail" : (context)=> Itemdetail(),
+        "HomeScreen" : (context)=> HomeScreen(),
+      },
+      home: Scaffold(
+        body: Stack(
+          children: [
+            DrawerScreen(),
+            HomeScreen(),
+          ],
+        ),
       ),
-
     );
   }
 }

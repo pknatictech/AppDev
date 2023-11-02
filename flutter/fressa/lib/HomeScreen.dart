@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fressa/Itemdetail.dart';
 import 'package:fressa/Resources.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,12 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
       transform: Matrix4.translationValues(x, y, 0)..scale(scalefactor),
       duration: Duration(milliseconds: 250),
       color: Colors.white,
-      child: Column(
+      child: Stack(
         children: [
-          SizedBox(
-            height: 40,
-          ),
           Container(
+            height: 50,
+            margin: EdgeInsets.only(top: 35),
             padding: EdgeInsets.only(left: 10, right: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Column(
                   children: [
                     Text(
-                      "FRESSA",
+                      firmname_detail[0]['name'],
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -63,7 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         Icon(Icons.location_on, color: primarycolor, size: 15),
-                        Text("Aligarh", style: TextStyle(fontSize: 15))
+                        Text(firmname_detail[0]['location'],
+                            style: TextStyle(fontSize: 15))
                       ],
                     ),
                   ],
@@ -75,56 +76,124 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
-            child: TextField(
-              style: TextStyle(fontSize: 20),
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent, width: 2.2),
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: primarycolor),
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                ),
-                prefixIcon: Icon(Icons.search, color: primarycolor),
-                hintText: "Search",
-                filled: true,
-                fillColor: Colors.orange.shade50,
+            margin: EdgeInsets.only(top: 90),
+            height: MediaQuery.of(context).size.height,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(
+                        top: 10, left: 20, right: 20, bottom: 10),
+                    child: TextField(
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(color: Colors.transparent, width: 2.2),
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: primarycolor),
+                          borderRadius: BorderRadius.all(Radius.circular(30)),
+                        ),
+                        prefixIcon: Icon(Icons.search, color: primarycolor),
+                        hintText: "Search",
+                        filled: true,
+                        fillColor: Colors.orange.shade50,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 140,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: categories.length,
+                        itemBuilder: (context, index) {
+                          return Column(
+                            children: [
+                              Container(
+                                height: 80,
+                                width: 80,
+                                margin: EdgeInsets.all(7),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: shadow,
+                                    borderRadius: BorderRadius.circular(20)),
+                                child:
+                                    Image.asset(categories[index]['iconPath']),
+                              ),
+                              Text(
+                                categories[index]['name'],
+                                style: TextStyle(color: primarycolor),
+                              ),
+                            ],
+                          );
+                        }),
+                  ),
+                  SizedBox(
+                      height: 20,
+                      child: Container(
+                        margin: EdgeInsets.only(left: 20),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Top Salable items ❤️",
+                          style: TextStyle(
+                              color: primarycolor, fontWeight: FontWeight.bold),
+                        ),
+                      )),
+                  Container(
+                    height: 250,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Stack(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.orange.shade50,
+                                  boxShadow: shadow,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                margin: EdgeInsets.only(top: 40),
+                              ),
+                              GestureDetector(
+                                onTap: (){
+                                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>Itemdetail()));
+                                  Navigator.pushNamed(context, "itemdetail");
+                                },
+                                child: Container(
+                                  margin: EdgeInsets.all(10),
+                                  height: 250,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                    image: AssetImage(
+                                      imagedata[0]['imagepath'],
+                                    ),
+                                    fit: BoxFit.contain,
+                                  )),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                            child: Container(
+                          margin: EdgeInsets.only(top: 60, bottom: 20),
+                          decoration: BoxDecoration(
+                              boxShadow: shadow,
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20),
+                                  bottomRight: Radius.circular(20))),
+                        ))
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          Container(
-            height: 140,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: categories.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 80,
-                          width: 80,
-                          margin: EdgeInsets.all(7),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            boxShadow: Shadow,
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: Image.asset(categories[index]['iconPath']),
-                        ),
-                        Text(categories[index]['name'],style: TextStyle(color: primarycolor),),
-                      ],
-                    ),
-                  );
-                }),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 10,right: 10),
-            height: 120,
-          ),
-
         ],
       ),
     );

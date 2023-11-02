@@ -11,7 +11,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange.shade100,
+      color: Colors.orange.shade50,
     );
   }
 }
