@@ -17,9 +17,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(isdrwaeropen ? 40 : 0),
+        color: Colors.white,
+      ),
       transform: Matrix4.translationValues(x, y, 0)..scale(scalefactor),
       duration: Duration(milliseconds: 250),
-      color: Colors.white,
       child: Stack(
         children: [
           Container(
@@ -158,20 +161,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                 margin: EdgeInsets.only(top: 40),
                               ),
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>Itemdetail()));
                                   Navigator.pushNamed(context, "itemdetail");
                                 },
                                 child: Container(
                                   margin: EdgeInsets.all(10),
                                   height: 250,
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                    image: AssetImage(
-                                      imagedata[0]['imagepath'],
-                                    ),
-                                    fit: BoxFit.contain,
-                                  )),
+                                  child: Hero(
+                                      tag: 1,
+                                      child: Image.asset(
+                                          imagedata[0]['imagepath'])),
                                 ),
                               )
                             ],

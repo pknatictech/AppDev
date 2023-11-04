@@ -74,7 +74,7 @@ class MyApp extends StatelessWidget {
               width: MediaQuery.of(context).size.width * .20,
               child: CircleAvatar(
                 maxRadius: 25,
-                child: Text(label,style: TextStyle(fontSize:  28),),
+                child: Text(label,style: TextStyle(fontSize: 28),),
               ),
             ),
             SizedBox(

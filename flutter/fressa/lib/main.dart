@@ -4,7 +4,7 @@ import 'DrawerScreen.dart';
 import 'Itemdetail.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Home(),
   ));

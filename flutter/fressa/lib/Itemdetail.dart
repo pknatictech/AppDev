@@ -48,7 +48,8 @@ class _ItemdetailState extends State<Itemdetail> {
               padding: EdgeInsets.all(50),
               child: Align(
                 alignment: Alignment.topCenter,
-                child: Image.asset(imagedata[0]['imagepath']),
+                child:
+                    Hero(tag: 1, child: Image.asset(imagedata[0]['imagepath'])),
               )),
           Align(
             alignment: Alignment.center,
@@ -84,7 +85,14 @@ class _ItemdetailState extends State<Itemdetail> {
                     height: 60,
                     width: 60,
                     margin: EdgeInsets.only(left: 30),
-                    child: IconButton(onPressed: (){},icon: Icon(Icons.plus_one,color: Colors.white,size: 30,),),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.plus_one,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                    ),
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -94,7 +102,12 @@ class _ItemdetailState extends State<Itemdetail> {
                     height: 60,
                     width: 250,
                     margin: EdgeInsets.only(right: 30),
-                    child: TextButton(onPressed: (){},child: Text("BUY NOW",style: TextStyle(color: Colors.white,fontSize: 22),)),
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "BUY NOW",
+                          style: TextStyle(color: Colors.white, fontSize: 22),
+                        )),
                   ),
                 ],
               ),

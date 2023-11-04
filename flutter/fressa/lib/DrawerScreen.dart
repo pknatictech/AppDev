@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Resources.dart';
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({super.key});
@@ -12,6 +13,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.orange.shade50,
+      child: Icon(drwaermenu[0]['icon']),
     );
   }
 }
