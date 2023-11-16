@@ -44,13 +44,6 @@ class _ItemdetailState extends State<Itemdetail> {
               ),
             ),
           ),
-          Container(
-              padding: EdgeInsets.all(50),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child:
-                    Hero(tag: 1, child: Image.asset(imagedata[0]['imagepath'])),
-              )),
           Align(
             alignment: Alignment.center,
             child: Container(
@@ -63,6 +56,49 @@ class _ItemdetailState extends State<Itemdetail> {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.center,
+            child: Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                height: 100,
+                child: Column(
+                  children: [
+                    Text(
+                      "Strawberry juice",
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.pink,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )),
+          ),
+          Container(
+              padding: EdgeInsets.all(50),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Hero(
+                    tag: 1,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.40,
+                      child: Image.asset(
+                        imagedata[0]['imagepath'],
+                      ),
+                    )),
+              )),
+          // Align(
+          //   alignment: Alignment.center,
+          //   child: Container(
+          //     margin: EdgeInsets.symmetric(horizontal: 20),
+          //     height: 100,
+          //     decoration: BoxDecoration(
+          //       color: Colors.white,
+          //       borderRadius: BorderRadius.circular(20),
+          //       boxShadow: shadow,
+          //     ),
+          //   ),
+          // ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(

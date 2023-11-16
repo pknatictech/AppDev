@@ -11,13 +11,6 @@ List<Map> firmname_detail = [
   {'name': "FRESSA", 'location': "Aligarh"},
 ];
 
-List<Map> drwaermenu = [
-  {'icon': FontAwesomeIcons.affiliatetheme, 'menu': 'Categories'},
-  {'icon': FontAwesomeIcons.affiliatetheme, 'menu': 'Categories'},
-  {'icon': FontAwesomeIcons.affiliatetheme, 'menu': 'Categories'},
-  {'icon': FontAwesomeIcons.affiliatetheme, 'menu': 'Categories'},
-  {'icon': FontAwesomeIcons.affiliatetheme, 'menu': 'Categories'},
-];
 
 List<Map> categories = [
   {'name': 'Juice', 'iconPath': 'img/e.png'},
@@ -97,4 +90,5 @@ List<Map> imagedata = [
   {'imagepath': 'img/ooo.png', 'name': 'drink67', 'price': '100'},
   {'imagepath': 'img/ppp.png', 'name': 'drink68', 'price': '100'},
   {'imagepath': 'img/qqq.png', 'name': 'drink69', 'price': '100'},
+  {'profile': 'img/profile.png'},
 ];

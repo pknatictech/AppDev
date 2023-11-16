@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fressa/Itemdetail.dart';
 import 'package:fressa/Resources.dart';
 
+var image = 0;
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -73,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 CircleAvatar(
-                  backgroundColor: primarycolor,
+                  foregroundImage: AssetImage("img/profile.jpg"),
                 )
               ],
             ),
@@ -133,17 +135,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                         }),
                   ),
-                  SizedBox(
-                      height: 20,
-                      child: Container(
-                        margin: EdgeInsets.only(left: 20),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Top Salable items ❤️",
-                          style: TextStyle(
-                              color: primarycolor, fontWeight: FontWeight.bold),
-                        ),
-                      )),
+                  Container(
+                    height: 20,
+                    margin: EdgeInsets.only(left: 20),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Top Salable items ❤️",
+                      style: TextStyle(
+                          color: primarycolor, fontWeight: FontWeight.bold),
+                    ),
+                  ),
                   Container(
                     height: 250,
                     margin: EdgeInsets.symmetric(horizontal: 20),
@@ -171,7 +172,88 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Hero(
                                       tag: 1,
                                       child: Image.asset(
-                                          imagedata[0]['imagepath'])),
+                                          imagedata[image]['imagepath'])),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                            child: Container(
+                          height: 220,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "Strawberry juice",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.pink,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "Only",
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.pink,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "119/-",
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.pink,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          margin: EdgeInsets.only(top: 60, bottom: 20),
+                          decoration: BoxDecoration(
+                              boxShadow: shadow,
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(20),
+                                  bottomRight: Radius.circular(20))),
+                        )),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 250,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Stack(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.orange.shade50,
+                                  boxShadow: shadow,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                margin: EdgeInsets.only(top: 40),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>Itemdetail()));
+                                  Navigator.pushNamed(context, "itemdetail");
+                                },
+                                child: Container(
+                                  margin: EdgeInsets.all(10),
+                                  height: 250,
+                                  child: Hero(
+                                      tag: 2,
+                                      child: Image.asset(
+                                          imagedata[image + 1]['imagepath'])),
                                 ),
                               )
                             ],
@@ -186,7 +268,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(20),
                                   bottomRight: Radius.circular(20))),
-                        ))
+                        )),
                       ],
                     ),
                   ),

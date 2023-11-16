@@ -1,5 +1,5 @@
 # Sum Of Two Numbers
 ## Enter Two Numbers And Get sum of it 
-![image](https://lh3.googleusercontent.com/pw/AJFCJaWYsGhusmKet1kGhDVJrdH3ckWaOeuJL8-cdmRNJWntYsk6zffCS0pzylEkMWU_VtQS8MCJUcW5NEYi_F9M5oAvNdxYML-Ul-JFuDo8ZWMF7kOdZ2DK391YCgPyN_7KXD77vXcC4zPPUz-QT6SurNWiO2NBoXkamLY4qBsO3bElOCPRB3_x_vPpoSZFJ6sGaRM7EXY4piOkjFqMsMoppzeLSsRh0JrQi0ioSb5Q1iT2qGxZodBHlqE_IpqP4zDGVUQ4oDnAJEEmNtN9UMnSIAMbhFXD-CvYh4F8n8PouLRZvkM2HddpqaJ_GdpkroU25oeh-QdpSqkUkSsCoebHhitJdtNygz7H4ReAKR7WE3hkN_mLimqS2ez-8rqKb2fK2A3lN-WxHyc2VwXDVKvwZKoc0MF-ONvR-dbgliIZbMthgus3M8ZQgTn-mHHEzmnHlR9rHB71mGW1OIaTVWJ46RuoCnqzNuDrMu3OKRr8WeFwwrfH3EcGBP64evoPfCikbhvkD6YVk8x_yLvO8mReWeM3ZValqfNDMb-pAsRmUtnOJ8XT_eYBIZn51eeSAmddB4Ggwhn5Kb0GfxOE0Y6KRFZU15tRSbZ0EckNzbj6vkVsfPZkKk2VEt7S92gNmaaNZ68XEQHJLJz4YvrGK809vPnMiUQkDnWvXdvOrvWeofgaEo66RToimtS_E_Z0E5shndXkc1fzXPRLgiyrTSqxnP6qtq6GZ6Bbhe9YfM9wIgUFwdn00qkkdYwGNQP5MRA1qG-fAaHtsb5-10oynZ-zuxq19GujrrZfux26shtASZ9W1G3_4OUrtFCRTa4MwRwz-N2Fk8Nmk4v6PXl_bEGice4bwtY-2dy7Jh92Vtub-qckTFUYSRytXadR698bcL7EPYpKKR9yhe6DlXHJAPpF5Q=w320-h665-s-no?authuser=0)
+![image]()
 ----
-##  👆[All Projects](https://github.com/pknatic/Android/tree/master) 👆[Home](https://github.com/pknatic)
+##  👆[All Projects](https://github.com/pknatictech/AppDev/tree/main) 👆[Home](https://github.com/pknatictech)
