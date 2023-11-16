@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fressa/Itemdetail.dart';
+// import 'package:fressa/Itemdetail.dart';
 import 'package:fressa/Resources.dart';
 
 var image = 0;
