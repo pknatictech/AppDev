@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Color primarycolor = const Color(0xffE65100);
 Color bgcolor = const Color(0xFFFFF5E0);
